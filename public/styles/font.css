@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "IRANYekan";
+    src: url("../fonts/iranyekan/IRANYekanXVF.woff") format("woff-variations"),
+    url("../fonts/iranyekan/IRANYekanXVF.woff") format("woff"),
+    url("../fonts/iranyekan/IRANYekanXVF.woff2") format("woff2");
+    font-display: fallback;
+    font-feature-settings: "lnum";
+}
+
+@font-face {
+    font-family: IRANYekanX;
+    font-style: normal;
+    font-weight: 300;
+    font-feature-settings: "lnum";
+    src: url("../fonts/iranyekans/iranyekan/IRANYekanX-Light.woff2") format("woff2"),
+    url("../fonts/iranyekans/iranyekan/IRANYekanX-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: IRANYekanX;
+    font-style: normal;
+    font-weight: 400;
+    font-feature-settings: "lnum";
+    src: url("../fonts/iranyekan/IRANYekanX-Regular.woff2") format("woff2"),
+    url("../fonts/iranyekan/IRANYekanX-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: IRANYekanX;
+    font-style: normal;
+    font-weight: 500;
+    font-feature-settings: "lnum";
+    src: url("../fonts/iranyekan/IRANYekanX-Medium.woff2") format("woff2"),
+    url("../fonts/iranyekan/IRANYekanX-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: IRANYekanX;
+    font-style: normal;
+    font-weight: 700;
+    font-feature-settings: "lnum";
+    src: url("../fonts/iranyekan/IRANYekanX-Bold.woff2") format("woff2"),
+    url("../fonts/iranyekan/IRANYekanX-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: IRANYekanX;
+    font-style: normal;
+    font-weight: 900;
+    font-feature-settings: "lnum";
+    src: url("../fonts/iranyekan/IRANYekanX-ExtraBold.woff2") format("woff2"),
+    url("../fonts/iranyekan/IRANYekanX-ExtraBold.woff") format("woff");
+}
+*,body{
+    font-family: "IRANYekan" !important;
+    -moz-font-feature-settings:"ss02" !important;
+    -webkit-font-feature-settings:"ss02" !important;
+    font-feature-settings:"ss02" !important;
+}
+.fars-standard {
+    -moz-font-feature-settings: "ss02";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+}
+
+.fars-standard-space {
+    -moz-font-feature-settings: "ss03";
+    -webkit-font-feature-settings: "ss03";
+    font-feature-settings: "ss03";
+}
