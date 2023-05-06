@@ -26,12 +26,12 @@ $(document).ready(function (){
 
         if (subject !== undefined) {
             if ( subject.length < 1)
-                messages.push('نام کاربری اجباریست');
+                messages.push('موضوع پیام اجباریست');
         }
 
         if (message !== undefined) {
             if ( message.length < 1)
-                messages.push('نام کاربری اجباریست');
+                messages.push('متن پیام اجباریست');
         }
         console.log(messages)
         setErrors(messages);
