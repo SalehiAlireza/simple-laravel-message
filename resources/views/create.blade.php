@@ -1,5 +1,8 @@
 <div class="container">
     <div class="row">
+        <div id="errorContainer"></div>
+    </div>
+    <div class="row">
         <div class="col-12 mt-3 mb-3">
             @if($errors->any())
                 <div>

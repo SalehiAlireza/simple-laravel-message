@@ -222,6 +222,7 @@
 <script src="{{ asset('table/jquery-3.2.1.min.js') }}"></script>
 <script src="{{ asset('table/bootstrap.min.js') }}"></script>
 <script src="{{ asset('table/popper.js') }}"></script>
+<script src="{{ asset('validation-jquery.js') }}"></script>
 <script>
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
