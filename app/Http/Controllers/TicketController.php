@@ -38,17 +38,15 @@ class TicketController extends Controller
     {
         $this->getValidate($request);
 
-
-        $filePath = [];
         $user = auth()->user();
         $data = $request->all();
-        $files = $request->file('medias');
         $data['user_id'] = $user->id;
 
-        foreach ($files as $file):
-            $filePath[] = $file->store('ticket');
-        endforeach;
-        $data['medias'] = $filePath;
+        if ($request->has('medias') && $request->medias)
+            $data['medias'] = explode(';',$request->medias);
+        else
+            $data['medias'] = '';
+
 
 
         if ($user->hasThisPermission('ceo'))
