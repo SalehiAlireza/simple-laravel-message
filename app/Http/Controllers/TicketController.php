@@ -112,4 +112,9 @@ class TicketController extends Controller
         ]);
     }
 
+    public function storeFile(Request $request)
+    {
+        return $request->file('file')->store('ticket');
+    }
+
 }

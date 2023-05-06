@@ -18,6 +18,8 @@ Route::group(['middleware' => 'auth'],function (){
     Route::get('/download/{path}',[TicketController::class,'downloadTicketMedia'])->name('download');
     Route::post('/ticket',[TicketController::class,'store'])->name('ticket.store');
     Route::post('/ticket/change-state/{id}',[TicketController::class,'changeState'])->name('ticket.change.state');
+    // store bu dropzone
+    Route::post('/ticket/dropzone',[TicketController::class,'storeFile'])->name('dropzone');
 
     Route::get('logout',[ManageUsersController::class,'logout'])->name('logout');
 });
