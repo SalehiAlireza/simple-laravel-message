@@ -44,7 +44,9 @@
 
             <div class="collapse" id="collapseExample">
                 <div class="card card-body">
-                    <form action="{{ route('ticket.store') }}" enctype="multipart/form-data" method="POST">
+                    <form action="{{ route('ticket.store') }}" enctype="multipart/form-data"  method="POST">
+
+
                         @csrf
 
 
@@ -99,7 +101,13 @@
                                             <div style="size: 16px">
                                                 ارسال رسانه
                                             </div>
-                                            <input type="file" name="medias[]" multiple class="form-control">
+                                            <input type="hidden" id="medias" name="medias">
+                                            <form action="/file-upload"
+                                                  class="dropzone"
+                                                  id="my-awesome-dropzone"></form>
+
+                                            <form action="{{ route('dropzone') }}" class="dropzone" id="my-dropzone"></form>
+
                                             <span class="underline"></span>
                                         </dd>
                                     </dl>
@@ -113,6 +121,7 @@
 
 
                     </form>
+
                 </div>
             </div>
         </div>

@@ -19,7 +19,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('table/util.css' ) }} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('table/main.css' ) }} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/font.css' ) }} ">
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('dropzone.css' ) }} ">
+    <script src="{{ asset('dropzone.js') }}"></script>
     <style>
 
         .require{
@@ -192,6 +193,27 @@
             text-align: right !important;
         }
     </style>
+    <script>
+        Dropzone.options.myDropzone = {
+            dictDefaultMessage: "فایل خود را آپلود کنید",
+            sending : function (file, xhr, formData){
+                formData.append('_token', '{{ csrf_token() }}');
+            },
+            success : function(file,response){
+                let medias = $("#medias");
+                let defaultValue = medias.val();
+                if (defaultValue === undefined)
+                    alert('ورودی عکس موجود نمی باشد');
+
+                if (defaultValue !== undefined && defaultValue === '' )
+                    defaultValue += response;
+                if (defaultValue !== undefined && defaultValue !== '' )
+                    defaultValue += ";"+response;
+
+                medias.val(defaultValue)
+            }
+        };
+    </script>
 </head>
 <body>
 
