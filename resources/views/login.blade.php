@@ -58,7 +58,7 @@
         .input-container input:focus{
             border:none;
             outline:none;
-            border-bottom:1px solid #e74c3c;
+            /*border-bottom:1px solid #e74c3c;*/
         }
         .btn{
             color:#fff;
@@ -89,17 +89,23 @@
 
         }
     </style>
+    <script src="{{ asset('jquery.js') }}"></script>
+    <script src="{{ asset('validation-jquery.js') }}"></script>
+
 </head>
 <body>
+<br>
+<div id="errorContainer"></div>
 <div class="box">
+
     <form action="{{ route('ticket.login.submit') }}" method="Post"  autocomplete="off">
         <span class="text-center">login</span>
         <div class="input-container">
-            <input name="username"  autocomplete="off" placeholder="نام کاربری" />
+            <input name="username" id="username"  autocomplete="off" placeholder="نام کاربری" />
             <label>username</label>
         </div>
         <div class="input-container">
-            <input type="password" name="password" autocomplete="off" placeholder="رمز عبور"  />
+            <input type="password" id="password" name="password" autocomplete="off" placeholder="رمز عبور"  />
             <label>password</label>
         </div>
         @csrf
