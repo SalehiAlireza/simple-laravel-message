@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->unsignedBigInteger('user_id');
-            $table->string('subject')->charset('utf8');
+            $table->string('subject',191)->charset('utf8');
             $table->enum('status', ['normal', 'require', 'emergency'])->default('normal');
             $table->unsignedBigInteger('supervisor_id')->nullable();
             $table->unsignedBigInteger('ceo_id')->nullable();
