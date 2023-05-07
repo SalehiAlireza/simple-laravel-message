@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('permissions', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
-            $table->string('farsi_name')->nullable();
+            $table->string('name',191)->unique();
+            $table->string('farsi_name',191)->nullable();
         });
     }
 
